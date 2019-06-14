@@ -27,4 +27,4 @@ Landry Thomes - "link to personal portfolio"
 Liberty Gallagher - "link to personal portfolio"  
 
 ## Next Steps
-
+ok
