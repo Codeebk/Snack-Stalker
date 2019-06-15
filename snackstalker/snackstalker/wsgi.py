@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'snackstalker.snackstalker.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Snack-Stalker.snackstalker.snackstalker.settings')
 
 application = get_wsgi_application()
