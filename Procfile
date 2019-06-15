@@ -1,1 +1,1 @@
-web: gunicorn snackstalker.wsgi --log-file -
+web: gunicorn snackstalker.wsgi
