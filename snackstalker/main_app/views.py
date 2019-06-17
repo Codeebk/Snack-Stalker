@@ -15,7 +15,7 @@ class PostUpdate(UpdateView):
 class PostCreate(CreateView):
   model = Post
   fields = ['title', 'description']
-  
+
   def form_valid(self, form):
     form.instance.user = self.request.user
     return super().form_valid(form)
