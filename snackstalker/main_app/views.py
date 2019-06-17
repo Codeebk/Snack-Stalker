@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Post
@@ -9,12 +9,16 @@ from .models import Post
 
 class PostUpdate(UpdateView):
   model = Post
-  fields = ['title', 'description', 'user']
+  fields = ['title', 'description']
 
 # Class views
 class PostCreate(CreateView):
   model = Post
   fields = '__all__'
+  success_url = '/posts/'
+
+class PostDelete(DeleteView):
+  model = Post
   success_url = '/posts/'
 
 
