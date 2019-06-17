@@ -1,3 +1,7 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -10,7 +14,16 @@ main {
 
 footer {
   padding-top: 0;
-  text-align: right;
-
 }
+
+.brand-logo {
+  font-style: italic;
+}
+
+.stalker {
+  font-style: bold;
+  color: pink;
+}
+
+
 
