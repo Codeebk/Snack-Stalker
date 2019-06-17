@@ -17,13 +17,15 @@
                 <ul>
                     <li><a href="/" class="left brand-logo">&nbsp;&nbsp;Snack Stalker</a></li>
                 </ul>
-                <ul class=" right">
-                    <li><a href="/about" class="teal-text text-teal lighten-2">About</a></li>
-                    <li><a href="/posts" class="teal-text text-teal lighten-2">View All Posts</a></li>
+                <ul class="right">
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'about' %}">About</a></li>
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'index' %}">View All Posts</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}" class="teal-text text-teal lighten-2">Log Out</a></li>
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'posts_create' %}">Add Post</a></li>
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'logout' %}">Log Out</a></li>
                     {% else %}
-                    <li><a href="{% url 'login' %}" class="teal-text text-teal lighten-2">Log In</a></li>
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'signup' %}">Sign up</a></li>
+                    <li><a class="teal-text text-teal lighten-2" href="{% url 'login' %}">Log In</a></li>
                   {% endif %}
                 </ul>
 
