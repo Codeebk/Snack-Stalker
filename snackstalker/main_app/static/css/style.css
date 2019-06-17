@@ -14,7 +14,6 @@ main {
 
 footer {
   padding-top: 0;
-  text-align: right;
 }
 
 .brand-logo {
@@ -25,4 +24,6 @@ footer {
   font-style: bold;
   color: pink;
 }
+
+
 
