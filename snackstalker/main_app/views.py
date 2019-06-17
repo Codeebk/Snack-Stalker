@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from .models import Post
@@ -7,11 +7,16 @@ from .models import Post
 # from django.http import 
 
 
+class PostUpdate(UpdateView):
+  model = Post
+  fields = ['title', 'description', 'user']
+
 # Class views
 class PostCreate(CreateView):
   model = Post
   fields = '__all__'
   success_url = '/posts/'
+
 
 # Create your views here.
 def home(request):
