@@ -14,8 +14,11 @@ class PostUpdate(UpdateView):
 # Class views
 class PostCreate(CreateView):
   model = Post
-  fields = '__all__'
-  success_url = '/posts/'
+  fields = ['title', 'description']
+  
+  def form_valid(self, form):
+    form.instance.user = self.request.user
+    return super().form_valid(form)
 
 class PostDelete(DeleteView):
   model = Post
